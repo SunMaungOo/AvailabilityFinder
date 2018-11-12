@@ -138,9 +138,15 @@ namespace AvailabilityFinder.Tests
 
             Range[] result = Availability.FindAvailable(limiting, dataPoint.ToArray());
 
-            Range range = result[0];
+            Assert.IsTrue(result.Length == 2, "The result length is not 2");
 
-            Assert.IsTrue(range.Start == 31 && range.End == 79);
+            Range firstRange = result[0];
+
+            Assert.IsTrue(firstRange.Start == 31 && firstRange.End == 79);
+
+            Range secondRange = result[1];
+
+            Assert.IsTrue(secondRange.Start == 100 && secondRange.End == 100);
 
         }
 
