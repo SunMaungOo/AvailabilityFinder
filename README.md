@@ -9,7 +9,7 @@ Library to find the availability in the range
 
 To find the available **range** which start at 0 and end at 100
 
-```
+```c#
 
 //create a range we wanted to find the availability
 
